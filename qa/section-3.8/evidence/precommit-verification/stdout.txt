@@ -1,0 +1,243 @@
+TAP version 13
+# Subtest: SmartGrow OS Automated REST API Test Suite
+    # Subtest: API-TC-01: GET /api/health should return 200 OK and service status UP
+    ok 1 - API-TC-01: GET /api/health should return 200 OK and service status UP
+      ---
+      duration_ms: 95.4532
+      type: 'test'
+      ...
+    # Subtest: API-TC-02: POST /api/auth/validate-password should return 200 OK for strong password
+    ok 2 - API-TC-02: POST /api/auth/validate-password should return 200 OK for strong password
+      ---
+      duration_ms: 33.5161
+      type: 'test'
+      ...
+    # Subtest: API-TC-03: POST /api/auth/validate-password should return 400 Bad Request for weak password (< 3 chars)
+    ok 3 - API-TC-03: POST /api/auth/validate-password should return 400 Bad Request for weak password (< 3 chars)
+      ---
+      duration_ms: 5.8725
+      type: 'test'
+      ...
+    # Subtest: API-TC-03b: POST /api/auth/validate-password should return 400 Bad Request when password contains spaces
+    ok 4 - API-TC-03b: POST /api/auth/validate-password should return 400 Bad Request when password contains spaces
+      ---
+      duration_ms: 6.5662
+      type: 'test'
+      ...
+    # Subtest: API-TC-04: POST /api/cart/summary should return 201 Created and free delivery for basket >= $50
+    ok 5 - API-TC-04: POST /api/cart/summary should return 201 Created and free delivery for basket >= $50
+      ---
+      duration_ms: 9.167
+      type: 'test'
+      ...
+    # Subtest: API-TC-05: POST /api/sensors/evaluate-pump should return 200 OK and PUMP_ON when moisture < 30%
+    ok 6 - API-TC-05: POST /api/sensors/evaluate-pump should return 200 OK and PUMP_ON when moisture < 30%
+      ---
+      duration_ms: 4.0106
+      type: 'test'
+      ...
+    # Subtest: API-TC-06: POST /api/sensors/evaluate-pump should return 400 Bad Request for out-of-range moisture (125%)
+    ok 7 - API-TC-06: POST /api/sensors/evaluate-pump should return 400 Bad Request for out-of-range moisture (125%)
+      ---
+      duration_ms: 3.8843
+      type: 'test'
+      ...
+    1..7
+ok 1 - SmartGrow OS Automated REST API Test Suite
+  ---
+  duration_ms: 171.1807
+  type: 'suite'
+  ...
+# Subtest: Cucumber Gherkin BDD Features (backend/features/)
+    # Subtest: Feature 1 (basket_pricing.feature): Customer orders fresh crops with standard home delivery (5 steps)
+    ok 1 - Feature 1 (basket_pricing.feature): Customer orders fresh crops with standard home delivery (5 steps)
+      ---
+      duration_ms: 1.1795
+      type: 'test'
+      ...
+    # Subtest: Feature 2 (water_pump.feature): Greenhouse Water Pump automatically activates when soil moisture < 30% (3 steps)
+    ok 2 - Feature 2 (water_pump.feature): Greenhouse Water Pump automatically activates when soil moisture < 30% (3 steps)
+      ---
+      duration_ms: 0.2028
+      type: 'test'
+      ...
+    1..2
+ok 2 - Cucumber Gherkin BDD Features (backend/features/)
+  ---
+  duration_ms: 2.6961
+  type: 'suite'
+  ...
+# Subtest: 1. SmartGrow OS Password Validator (TDD Workflow)
+    # Subtest: returns { valid: false } for a short password (< 3 characters)
+    ok 1 - returns { valid: false } for a short password (< 3 characters)
+      ---
+      duration_ms: 2.442
+      type: 'test'
+      ...
+    # Subtest: returns { valid: false } when password has no uppercase letter
+    ok 2 - returns { valid: false } when password has no uppercase letter
+      ---
+      duration_ms: 0.3277
+      type: 'test'
+      ...
+    # Subtest: returns { valid: false } when password has no digit
+    ok 3 - returns { valid: false } when password has no digit
+      ---
+      duration_ms: 0.2449
+      type: 'test'
+      ...
+    # Subtest: returns { valid: false } when password has no special character
+    ok 4 - returns { valid: false } when password has no special character
+      ---
+      duration_ms: 0.2469
+      type: 'test'
+      ...
+    # Subtest: returns { valid: false } when password contains spaces
+    ok 5 - returns { valid: false } when password contains spaces
+      ---
+      duration_ms: 0.3154
+      type: 'test'
+      ...
+    # Subtest: returns { valid: true } for a strong 8+ character password with uppercase, digit, and special char
+    ok 6 - returns { valid: true } for a strong 8+ character password with uppercase, digit, and special char
+      ---
+      duration_ms: 0.2354
+      type: 'test'
+      ...
+    1..6
+ok 3 - 1. SmartGrow OS Password Validator (TDD Workflow)
+  ---
+  duration_ms: 6.3345
+  type: 'suite'
+  ...
+# Subtest: 2. SmartGrow OS Water Pump Automation Unit Tests
+    # Subtest: returns MANUAL_MODE when pump mode is MANUAL
+    ok 1 - returns MANUAL_MODE when pump mode is MANUAL
+      ---
+      duration_ms: 0.3674
+      type: 'test'
+      ...
+    # Subtest: turns pump ON when mode is AUTOMATIC and soil moisture is below 30%
+    ok 2 - turns pump ON when mode is AUTOMATIC and soil moisture is below 30%
+      ---
+      duration_ms: 0.2915
+      type: 'test'
+      ...
+    # Subtest: turns pump OFF when mode is AUTOMATIC and soil moisture is 60% or above
+    ok 3 - turns pump OFF when mode is AUTOMATIC and soil moisture is 60% or above
+      ---
+      duration_ms: 0.1872
+      type: 'test'
+      ...
+    # Subtest: returns NO_CHANGE when soil moisture is between 30% and 59.9%
+    ok 4 - returns NO_CHANGE when soil moisture is between 30% and 59.9%
+      ---
+      duration_ms: 0.2362
+      type: 'test'
+      ...
+    1..4
+ok 4 - 2. SmartGrow OS Water Pump Automation Unit Tests
+  ---
+  duration_ms: 1.5548
+  type: 'suite'
+  ...
+# Subtest: 3. SmartGrow OS Basket & Delivery Fee Unit Tests
+    # Subtest: returns { subtotal: 0, deliveryFee: 0, total: 0 } when basket items array is empty
+    ok 1 - returns { subtotal: 0, deliveryFee: 0, total: 0 } when basket items array is empty
+      ---
+      duration_ms: 2.9857
+      type: 'test'
+      ...
+    # Subtest: adds $2.50 delivery fee for Home Delivery when subtotal is below $50
+    ok 2 - adds $2.50 delivery fee for Home Delivery when subtotal is below $50
+      ---
+      duration_ms: 0.2129
+      type: 'test'
+      ...
+    # Subtest: gives free delivery ($0.00) when Home Delivery subtotal is $50 or more
+    ok 3 - gives free delivery ($0.00) when Home Delivery subtotal is $50 or more
+      ---
+      duration_ms: 0.1505
+      type: 'test'
+      ...
+    # Subtest: gives free pickup ($0.00) when Farm Pickup is selected regardless of subtotal
+    ok 4 - gives free pickup ($0.00) when Farm Pickup is selected regardless of subtotal
+      ---
+      duration_ms: 0.1246
+      type: 'test'
+      ...
+    1..4
+ok 5 - 3. SmartGrow OS Basket & Delivery Fee Unit Tests
+  ---
+  duration_ms: 3.7558
+  type: 'suite'
+  ...
+# Subtest: APP-01: actual landing route responds with the application message
+ok 6 - APP-01: actual landing route responds with the application message
+  ---
+  duration_ms: 2348.8119
+  type: 'test'
+  ...
+# Subtest: APP-02: lowercase login and protected profile use real persistence
+ok 7 - APP-02: lowercase login and protected profile use real persistence
+  ---
+  duration_ms: 109.7422
+  type: 'test'
+  ...
+# Subtest: SG-001: anonymous registration must reject the privileged admin role
+ok 8 - SG-001: anonymous registration must reject the privileged admin role
+  ---
+  duration_ms: 4.9375
+  type: 'test'
+  ...
+# Subtest: SG-002: login normalizes email case consistently with registration
+ok 9 - SG-002: login normalizes email case consistently with registration
+  ---
+  duration_ms: 108.3966
+  type: 'test'
+  ...
+# Subtest: APP-03: real farmer product creation and database-backed basket calculation
+ok 10 - APP-03: real farmer product creation and database-backed basket calculation
+  ---
+  duration_ms: 22.0083
+  type: 'test'
+  ...
+# Subtest: APP-04: signed-out profile and administrator access are denied
+ok 11 - APP-04: signed-out profile and administrator access are denied
+  ---
+  duration_ms: 3.613
+  type: 'test'
+  ...
+# Subtest: SG-003: signed-out device creation must require authentication
+ok 12 - SG-003: signed-out device creation must require authentication
+  ---
+  duration_ms: 141.3386
+  type: 'test'
+  ...
+# Subtest: SG-004: a fallback basket must reject negative quantity
+ok 13 - SG-004: a fallback basket must reject negative quantity
+  ---
+  duration_ms: 37.9833
+  type: 'test'
+  ...
+# Subtest: APP-05: fixture-only health route is absent from the actual application
+ok 14 - APP-05: fixture-only health route is absent from the actual application
+  ---
+  duration_ms: 8.5876
+  type: 'test'
+  ...
+# Subtest: SG-005: server simulator import matches the tracked filename exactly
+ok 15 - SG-005: server simulator import matches the tracked filename exactly
+  ---
+  duration_ms: 1.0078
+  type: 'test'
+  ...
+1..15
+# tests 33
+# suites 5
+# pass 33
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7987.7033

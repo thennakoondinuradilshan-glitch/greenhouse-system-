@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Device = require('../models/Device');
+const { protect, authorizeRoles } = require('../middleware/authMiddleware');
 
 // 1. GET ALL DEVICES
 router.get('/', async (req, res) => {
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // 2. CREATE A NEW DEVICE
-router.post('/', async (req, res) => {
+router.post('/', protect, authorizeRoles('farmer', 'admin'), async (req, res) => {
     const { name, type, status, mode } = req.body;
 
     const device = new Device({
@@ -32,7 +33,7 @@ router.post('/', async (req, res) => {
 });
 
 // 3. UPDATE A DEVICE 
-router.put('/:id', async (req, res) => {
+router.put('/:id', protect, authorizeRoles('farmer', 'admin'), async (req, res) => {
     try {
         const { status, mode } = req.body;
         const device = await Device.findById(req.params.id);
@@ -53,7 +54,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // 4. DELETE A DEVICE
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', protect, authorizeRoles('farmer', 'admin'), async (req, res) => {
     try {
         const device = await Device.findByIdAndDelete(req.params.id);
         if (!device) {

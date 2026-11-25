@@ -1,0 +1,77 @@
+TAP version 13
+# Subtest: APP-01: actual landing route responds with the application message
+ok 1 - APP-01: actual landing route responds with the application message
+  ---
+  duration_ms: 1477.5797
+  type: 'test'
+  ...
+# Subtest: APP-02: lowercase login and protected profile use real persistence
+ok 2 - APP-02: lowercase login and protected profile use real persistence
+  ---
+  duration_ms: 85.5441
+  type: 'test'
+  ...
+# Subtest: SG-001: anonymous registration must reject the privileged admin role
+ok 3 - SG-001: anonymous registration must reject the privileged admin role
+  ---
+  duration_ms: 2.9335
+  type: 'test'
+  ...
+# Subtest: SG-002: login normalizes email case consistently with registration
+ok 4 - SG-002: login normalizes email case consistently with registration
+  ---
+  duration_ms: 81.3007
+  type: 'test'
+  ...
+# Subtest: APP-03: real farmer product creation and database-backed basket calculation
+ok 5 - APP-03: real farmer product creation and database-backed basket calculation
+  ---
+  duration_ms: 11.6359
+  type: 'test'
+  ...
+# Subtest: APP-04: signed-out profile and administrator access are denied
+ok 6 - APP-04: signed-out profile and administrator access are denied
+  ---
+  duration_ms: 2.2302
+  type: 'test'
+  ...
+# Subtest: SG-003: signed-out device creation must require authentication
+ok 7 - SG-003: signed-out device creation must require authentication
+  ---
+  duration_ms: 97.6709
+  type: 'test'
+  ...
+# Subtest: SG-004: a fallback basket must reject negative quantity
+ok 8 - SG-004: a fallback basket must reject negative quantity
+  ---
+  duration_ms: 14.3688
+  type: 'test'
+  ...
+# Subtest: APP-05: fixture-only health route is absent from the actual application
+ok 9 - APP-05: fixture-only health route is absent from the actual application
+  ---
+  duration_ms: 5.732
+  type: 'test'
+  ...
+# Subtest: SG-005: server simulator import matches the tracked filename exactly
+ok 10 - SG-005: server simulator import matches the tracked filename exactly
+  ---
+  duration_ms: 0.5941
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6921.3425
+
+=============================== Coverage summary ===============================
+Statements   : 31.93% ( 2440/7640 )
+Branches     : 50.8% ( 95/187 )
+Functions    : 17.39% ( 4/23 )
+Lines        : 31.93% ( 2440/7640 )
+================================================================================

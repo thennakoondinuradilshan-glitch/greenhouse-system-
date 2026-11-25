@@ -1,0 +1,8 @@
+{
+  "runId": "1795615220352-8620",
+  "node": "v26.13.0",
+  "platform": "win32",
+  "api": "http://127.0.0.1:5001",
+  "database": "mongodb://127.0.0.1:27028/smartgrow_qa_1795615220352-8620",
+  "data": "Synthetic accounts/products only; fresh mongod directory; no remote connection or actuator"
+}

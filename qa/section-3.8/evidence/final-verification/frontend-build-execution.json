@@ -1,0 +1,15 @@
+﻿{
+    "command":  [
+                    "npm.cmd",
+                    "--prefix",
+                    "frontend",
+                    "run",
+                    "build"
+                ],
+    "workingDirectory":  "C:\\QA-Project\\greenhouse-system-",
+    "startedAt":  "2026-11-25T19:44:18.9658986+05:30",
+    "finishedAt":  "2026-11-25T19:44:25.4470943+05:30",
+    "exitCode":  0,
+    "node":  "v26.13.0",
+    "platform":  "Win32NT"
+}

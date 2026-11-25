@@ -1,0 +1,22 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "backend/tests/unit/smartgrow.test.js",
+    "backend/tests/bdd/bdd.test.js",
+    "backend/tests/api/api.test.js",
+    "qa/section-3.8/tests/application.test.cjs"
+  ],
+  "workingDirectory": "C:\\QA-Project\\greenhouse-system-",
+  "startedAt": "2026-11-25T17:48:41.270Z",
+  "finishedAt": "2026-11-25T17:48:49.376Z",
+  "exitCode": 0,
+  "node": "v26.13.0",
+  "sourceSha256": {
+    "backend/routes/authRoutes.js": "0e89de08d551b946dc0b6315ba7ea8a57934002fbfb628cbcaf30dc10aee6580",
+    "backend/server.js": "081edd7f35386eb37ed2e1393fe367e1388fff29a0c4bc7c2f91b69fffa49c7d",
+    "backend/routes/cartRoutes.js": "2826d71bd18417eb3ba8d04b8ba37dee7b2417266602b764290fa31f7a751356",
+    "backend/routes/deviceRoutes.js": "15eec282d85512203f78ace5fdaa92be85dc7de1825e77ac409dfa1bc08323ff"
+  }
+}

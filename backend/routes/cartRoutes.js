@@ -37,8 +37,14 @@ router.post('/calculate', async (req, res) => {
     const farmersSet = new Map();
 
     for (const item of items) {
+      if (!item) {
+        return res.status(400).json({ error: 'Cart quantity must be a finite number of at least 1' });
+      }
+      const requestedQty = item.quantity === undefined ? 1 : Number(item.quantity);
+      if (!Number.isFinite(requestedQty) || requestedQty < 1) {
+        return res.status(400).json({ error: 'Cart quantity must be a finite number of at least 1' });
+      }
       const productId = item.productId || item.id || item._id;
-      const requestedQty = Math.max(1, Number(item.quantity) || 1);
 
       // Check if valid ObjectId
       const isValidObjectId = mongoose.Types.ObjectId.isValid(productId);
@@ -50,9 +56,12 @@ router.post('/calculate', async (req, res) => {
 
       if (!product) {
         // Fallback for fallback catalog items
-        if (item.name && item.price) {
+        if (item.name && item.price !== undefined) {
           const fallbackPrice = Number(item.price);
-          const fallbackQty = Number(item.quantity) || 1;
+          if (!Number.isFinite(fallbackPrice) || fallbackPrice <= 0) {
+            return res.status(400).json({ error: 'Crop price must be a finite positive number' });
+          }
+          const fallbackQty = requestedQty;
           const itemTotal = Number((fallbackPrice * fallbackQty).toFixed(2));
           subtotal += itemTotal;
 
@@ -217,8 +226,15 @@ router.post('/calculate-supplies', async (req, res) => {
     const suppliersSet = new Map();
 
     for (const item of items) {
+      if (!item) {
+        return res.status(400).json({ error: 'Supply quantity must be a finite number of at least 1' });
+      }
+      const suppliedQuantity = item.quantity === undefined ? item.cartQuantity : item.quantity;
+      const requestedQty = suppliedQuantity === undefined ? 1 : Number(suppliedQuantity);
+      if (!Number.isFinite(requestedQty) || requestedQty < 1) {
+        return res.status(400).json({ error: 'Supply quantity must be a finite number of at least 1' });
+      }
       const supplyId = item.supplyId || item.productId || item.id || item._id;
-      const requestedQty = Math.max(1, Number(item.quantity || item.cartQuantity) || 1);
 
       const isValidObjectId = mongoose.Types.ObjectId.isValid(supplyId);
       let supply = null;
@@ -229,8 +245,11 @@ router.post('/calculate-supplies', async (req, res) => {
 
       if (!supply) {
         // Fallback for offline sample catalog items
-        if (item.name && item.price) {
+        if (item.name && item.price !== undefined) {
           const fallbackPrice = Number(item.price);
+          if (!Number.isFinite(fallbackPrice) || fallbackPrice <= 0) {
+            return res.status(400).json({ error: 'Supply price must be a finite positive number' });
+          }
           const minQty = Number(item.minOrderQuantity) || 1;
           const validQty = Math.max(minQty, requestedQty);
           const itemTotal = Number((fallbackPrice * validQty).toFixed(2));
