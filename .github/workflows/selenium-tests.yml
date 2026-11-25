@@ -1,0 +1,75 @@
+name: SmartGrow Selenium UI Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  selenium:
+    name: Selenium UI tests with isolated MongoDB
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+    services:
+      mongodb:
+        image: mongo:8.0
+        ports:
+          - 27038:27017
+        options: >-
+          --health-cmd "mongosh --quiet --eval 'db.adminCommand({ping:1}).ok'"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      QA_HEADLESS: '1'
+      QA_USE_MONGO_SERVICE: '1'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '26.13.0'
+          cache: npm
+          cache-dependency-path: |
+            backend/package-lock.json
+            frontend/package-lock.json
+            qa/section-3.6/package-lock.json
+      - name: Install backend dependencies
+        run: |
+          mkdir -p qa/section-3.6/evidence/ci-setup
+          npm ci --prefix backend 2>&1 | tee qa/section-3.6/evidence/ci-setup/backend-install.txt
+      - name: Install frontend dependencies
+        run: npm ci --prefix frontend 2>&1 | tee qa/section-3.6/evidence/ci-setup/frontend-install.txt
+      - name: Install Selenium dependencies
+        run: npm ci --prefix qa/section-3.6 2>&1 | tee qa/section-3.6/evidence/ci-setup/selenium-install.txt
+      - name: Verify frontend production build
+        run: npm run build --prefix frontend 2>&1 | tee qa/section-3.6/evidence/ci-setup/frontend-build.txt
+      - name: Configure installed Chrome
+        run: |
+          google-chrome --version
+          printf 'QA_CHROME=%s\n' "$(command -v google-chrome)" >> "$GITHUB_ENV"
+      - name: Start application, wait for readiness, and run Selenium
+        # The runner creates a unique database in the MongoDB service,
+        # starts the real backend and frontend, and waits before opening Chrome.
+        # Its nonzero exit code fails this job if any test fails or is blocked.
+        run: node qa/section-3.6/tests/run-selenium.cjs
+      - name: Publish test summary
+        if: always()
+        run: node qa/section-3.6/scripts/ci-summary.cjs
+      - name: Upload screenshots, logs, and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smartgrow-selenium-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            qa/section-3.6/evidence/ci-setup/
+            qa/section-3.6/evidence/ci/
+          if-no-files-found: warn
+          retention-days: 30

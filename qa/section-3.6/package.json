@@ -1,0 +1,12 @@
+{
+  "name": "smartgrow-section-3-6-selenium",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Headed Selenium UI tests and genuine execution evidence for EC4206 section 3.6",
+  "scripts": {
+    "test": "node tests/run-selenium.cjs"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "4.54.0"
+  }
+}
