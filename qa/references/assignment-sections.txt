@@ -1,0 +1,8 @@
+3.8 Defect Tracking (LO-2, LO-4)
+Log bugs found during testing into Jira, Bugzilla, or GitHub Issues
+Perform Root Cause Analysis on 1–2 significant bugs
+Document the full bug lifecycle for at least one bug (New → Assigned → Fixed → Verified → Closed)
+3.9 Quality Metrics & SonarQube (LO-4)
+Run SonarQube against the codebase
+Report key metrics: code coverage %, defect density, code smells, technical debt
+Propose 2–3 concrete improvements based on SonarQube findings

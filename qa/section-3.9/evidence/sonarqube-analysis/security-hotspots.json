@@ -1,0 +1,189 @@
+﻿[
+    {
+        "key":  "fcc539f7-1b6e-4441-97f5-1be8ecec9bf5",
+        "component":  "backend/routes/consultationRoutes.js",
+        "ruleKey":  "javascript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  237,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "a7a7aaa6-55c8-4836-bc00-596ee358e776",
+        "component":  "backend/routes/orderRoutes.js",
+        "ruleKey":  "javascript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  198,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "fedbe643-f42c-4a61-963b-3f9006336ae7",
+        "component":  "backend/routes/problemRoutes.js",
+        "ruleKey":  "javascript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  181,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "f2e5adb0-dd5a-404a-a066-109f71eea173",
+        "component":  "backend/routes/supplyOrderRoutes.js",
+        "ruleKey":  "javascript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  207,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "4219f2df-f488-4c0a-9429-cf1aa3e7cc31",
+        "component":  "backend/utils/sensorsimulator.js",
+        "ruleKey":  "javascript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  7,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "e705ff3d-ab21-4144-a48f-201ac69b5463",
+        "component":  "frontend/src/components/support/SupportView.jsx",
+        "ruleKey":  "javascript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  149,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "49aceed5-7a5b-4b62-a1b3-d01179557817",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  42,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "8e901758-1ab4-4f42-a06d-a21c7fffb0f1",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  43,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "67b4b565-05c6-4412-903b-3cbafb2d3b04",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  44,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "044607c9-a66d-440d-ab89-fb8b001644c2",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  45,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "3a938113-8ab4-4a51-85f8-7f9eda42e862",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  46,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "550d444c-d6a4-4ff7-886d-4cc2e3ebb199",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  47,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "ab3a3b2c-742a-4d58-8d3e-9b143e43d4c3",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  48,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "68443e53-21c5-4d89-b004-099fcacb4f55",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  49,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "44cf1152-880e-4cdf-9d8c-ef8936c3f8d4",
+        "component":  "frontend/src/components/AtmosphereCanvas.tsx",
+        "ruleKey":  "typescript:S2245",
+        "ruleName":  "Using pseudorandom number generators (PRNGs) is security-sensitive",
+        "securityCategory":  "weak-cryptography",
+        "vulnerabilityProbability":  "MEDIUM",
+        "status":  "TO_REVIEW",
+        "line":  84,
+        "message":  "Make sure that using this pseudorandom number generator is safe here."
+    },
+    {
+        "key":  "30403380-548d-4d12-9c58-c4d22dd87536",
+        "component":  "backend/server.js",
+        "ruleKey":  "javascript:S5122",
+        "ruleName":  "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
+        "securityCategory":  "insecure-conf",
+        "vulnerabilityProbability":  "LOW",
+        "status":  "TO_REVIEW",
+        "line":  11,
+        "message":  "Make sure that enabling CORS is safe here."
+    },
+    {
+        "key":  "6e83ce93-ce40-463d-a1e9-fd54c81b4ee7",
+        "component":  "backend/server.js",
+        "ruleKey":  "javascript:S5689",
+        "ruleName":  "Disclosing fingerprints from web application technologies is security-sensitive",
+        "securityCategory":  "others",
+        "vulnerabilityProbability":  "LOW",
+        "status":  "TO_REVIEW",
+        "line":  8,
+        "message":  "This framework implicitly discloses version information by default. Make sure it is safe here."
+    }
+]
