@@ -1,0 +1,5 @@
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+GET / -> 200
+GET /api/health -> 404
+GET /api/admin/expertconnect/stats -> 401
+GET /api/auth/profile -> 401
