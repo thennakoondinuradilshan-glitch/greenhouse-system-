@@ -17,13 +17,13 @@ export const getDevices = async () => {
 
 // 3. Update device status/mode
 export const updateDevice = async (id, data) => {
-    const response = await axios.put(`${API_URL}/devices/${id}`, data);
+    const response = await axios.put(`${API_URL}/devices/${id}`, data, getAuthHeaders());
     return response.data;
 };
 
 // 4.delete a device
 export const deleteDevice = async (id) => {
-    const response = await axios.delete(`${API_URL}/devices/${id}`);
+    const response = await axios.delete(`${API_URL}/devices/${id}`, getAuthHeaders());
     return response.data;
 };
 
