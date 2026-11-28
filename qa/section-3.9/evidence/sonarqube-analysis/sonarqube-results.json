@@ -1,0 +1,870 @@
+﻿{
+    "serverVersion":  "26.1.0.118079",
+    "serverStatus":  "UP",
+    "projectKey":  "smartgrow-ec4206-local",
+    "analysisTaskId":  "bac1d3b5-43ef-450a-926d-cada23563ec3",
+    "analysisStatus":  "SUCCESS",
+    "analysisDate":  null,
+    "qualityGateStatus":  "OK",
+    "measures":  [
+                     {
+                         "metric":  "coverage",
+                         "value":  "25.0",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "bugs",
+                         "value":  "23",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "code_smells",
+                         "value":  "954",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "duplicated_lines_density",
+                         "value":  "4.5",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "ncloc",
+                         "value":  "24424"
+                     },
+                     {
+                         "metric":  "sqale_debt_ratio",
+                         "value":  "0.7",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "vulnerabilities",
+                         "value":  "0",
+                         "bestValue":  true
+                     },
+                     {
+                         "metric":  "security_hotspots_reviewed",
+                         "value":  "0.0",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "lines",
+                         "value":  "26241"
+                     },
+                     {
+                         "metric":  "security_hotspots",
+                         "value":  "17",
+                         "bestValue":  false
+                     },
+                     {
+                         "metric":  "sqale_index",
+                         "value":  "5373",
+                         "bestValue":  false
+                     }
+                 ],
+    "baselineReproducedDefects":  5,
+    "baselineDefectDensityPerKloc":  0.2,
+    "findings":  [
+                     {
+                         "key":  "c2c0cf75-e09f-4d2f-ae0a-0dfdd5dedb7c",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S2486",
+                         "component":  "smartgrow-ec4206-local:backend/routes/authRoutes.js",
+                         "message":  "Handle this exception or don\u0027t catch it at all."
+                     },
+                     {
+                         "key":  "808a5326-922a-469a-8edc-062f1b2837ac",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:backend/routes/authRoutes.js",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed."
+                     },
+                     {
+                         "key":  "95e793d4-7e3a-4958-802c-5f2e00459ab8",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7781",
+                         "component":  "smartgrow-ec4206-local:backend/routes/authRoutes.js",
+                         "message":  "Prefer `String#replaceAll()` over `String#replace()`."
+                     },
+                     {
+                         "key":  "f285cda7-7e78-41b3-9e0f-21cce040b082",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S6353",
+                         "component":  "smartgrow-ec4206-local:backend/routes/authRoutes.js",
+                         "message":  "Use concise character class syntax \u0027\\d\u0027 instead of \u0027[0-9]\u0027."
+                     },
+                     {
+                         "key":  "0abf100c-e3e3-4659-a84e-9e87044afcf9",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S2486",
+                         "component":  "smartgrow-ec4206-local:backend/routes/authRoutes.js",
+                         "message":  "Handle this exception or don\u0027t catch it at all."
+                     },
+                     {
+                         "key":  "b3d2d86a-1ac8-4fc7-9293-acbaeaad08ed",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:backend/routes/cartRoutes.js",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 34 to the 15 allowed."
+                     },
+                     {
+                         "key":  "50824e64-bb2a-4ae5-b855-30a8b930437f",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7735",
+                         "component":  "smartgrow-ec4206-local:backend/routes/cartRoutes.js",
+                         "message":  "Unexpected negated condition."
+                     },
+                     {
+                         "key":  "ad0ea4af-4b12-4df5-ad7f-14fd7a7be656",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7748",
+                         "component":  "smartgrow-ec4206-local:backend/routes/cartRoutes.js",
+                         "message":  "Don\u0027t use a zero fraction in the number."
+                     },
+                     {
+                         "key":  "4c0b8772-2b96-4c0f-8162-9388beb93c19",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:backend/routes/cartRoutes.js",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed."
+                     },
+                     {
+                         "key":  "c4aa571e-6a7c-4901-ad1a-e0d0f6541b90",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7735",
+                         "component":  "smartgrow-ec4206-local:backend/routes/cartRoutes.js",
+                         "message":  "Unexpected negated condition."
+                     },
+                     {
+                         "key":  "04f60f7b-e7de-4ae5-8cc1-a13ef0f20c31",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7748",
+                         "component":  "smartgrow-ec4206-local:backend/routes/cartRoutes.js",
+                         "message":  "Don\u0027t use a zero fraction in the number."
+                     },
+                     {
+                         "key":  "17062cc8-6bd1-472e-b296-26c8107a8c6a",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S7785",
+                         "component":  "smartgrow-ec4206-local:backend/server.js",
+                         "message":  "Prefer top-level await over using a promise chain."
+                     },
+                     {
+                         "key":  "803a0f0f-d8c6-4c32-9dba-47bd0e820401",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6582",
+                         "component":  "smartgrow-ec4206-local:frontend/src/services/api.js",
+                         "message":  "Prefer using an optional chain expression instead, as it\u0027s more concise and easier to read."
+                     },
+                     {
+                         "key":  "c9a6528f-dbf2-40cc-9fe3-41cdde8d905e",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7764",
+                         "component":  "smartgrow-ec4206-local:frontend/src/services/api.js",
+                         "message":  "Prefer `globalThis` over `window`."
+                     },
+                     {
+                         "key":  "dbea58aa-7f74-4529-93c1-1a6a4333dca2",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6582",
+                         "component":  "smartgrow-ec4206-local:frontend/src/services/api.js",
+                         "message":  "Prefer using an optional chain expression instead, as it\u0027s more concise and easier to read."
+                     },
+                     {
+                         "key":  "7bee4dae-ab25-4620-bdff-d1d1cfb37848",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S6353",
+                         "component":  "smartgrow-ec4206-local:backend/utils/qaLogic.js",
+                         "message":  "Use concise character class syntax \u0027\\d\u0027 instead of \u0027[0-9]\u0027."
+                     },
+                     {
+                         "key":  "b7e2e078-afea-4079-837b-0fe962db1349",
+                         "type":  "CODE_SMELL",
+                         "severity":  "BLOCKER",
+                         "rule":  "javascript:S2187",
+                         "component":  "smartgrow-ec4206-local:backend/tests/ui/selenium_marketplace.test.js",
+                         "message":  "Add some tests to this file or delete it."
+                     },
+                     {
+                         "key":  "bf5e6af1-973e-49c2-b7cb-e69223b322de",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7748",
+                         "component":  "smartgrow-ec4206-local:backend/utils/qaLogic.js",
+                         "message":  "Don\u0027t use a zero fraction in the number."
+                     },
+                     {
+                         "key":  "35d123a6-f86e-4bf2-b0e3-a3bea254bea7",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CustomerOrdersModal.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "f16f3da6-f2a5-4e51-afc3-930ef609e67c",
+                         "type":  "BUG",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6638",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CustomerOrdersModal.jsx",
+                         "message":  "Unexpected constant nullishness on the left-hand side of a `??` expression."
+                     },
+                     {
+                         "key":  "9f6f211b-0935-4433-b58d-56270f92aca3",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/CustomerSupplyOrdersModal.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "02c5c7e3-0a61-46fa-9bcb-54768fb975e6",
+                         "type":  "BUG",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6638",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/CustomerSupplyOrdersModal.jsx",
+                         "message":  "Unexpected constant nullishness on the left-hand side of a `??` expression."
+                     },
+                     {
+                         "key":  "3794e652-27b5-4008-951a-c5b045eb0663",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7764",
+                         "component":  "smartgrow-ec4206-local:frontend/src/App.jsx",
+                         "message":  "Prefer `globalThis` over `window`."
+                     },
+                     {
+                         "key":  "b86b6eae-15ea-4856-a0b5-2b1ab39942a1",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7764",
+                         "component":  "smartgrow-ec4206-local:frontend/src/App.jsx",
+                         "message":  "Prefer `globalThis` over `window`."
+                     },
+                     {
+                         "key":  "c74e0f58-b4d6-44d3-9676-a1d1451d543e",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7764",
+                         "component":  "smartgrow-ec4206-local:frontend/src/App.jsx",
+                         "message":  "Prefer `globalThis` over `window`."
+                     },
+                     {
+                         "key":  "7104a7c7-587c-45aa-9892-5b999cc460f1",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7764",
+                         "component":  "smartgrow-ec4206-local:frontend/src/App.jsx",
+                         "message":  "Prefer `globalThis` over `window`."
+                     },
+                     {
+                         "key":  "9a895cb6-cad0-4e21-8994-0e51cb5276eb",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed."
+                     },
+                     {
+                         "key":  "5a50c8be-080d-44f6-a0c8-527af63965bb",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7764",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Prefer `globalThis` over `window`."
+                     },
+                     {
+                         "key":  "0cc4a398-1b45-444a-9d3b-266618e83f75",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S7764",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Prefer `globalThis` over `window`."
+                     },
+                     {
+                         "key":  "fe9b6500-68a1-4f2c-a683-c2008c65bb7f",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed."
+                     },
+                     {
+                         "key":  "1cf3faae-988d-4e9b-b80a-06a7b2052c60",
+                         "type":  "BUG",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S930",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "This function expects 1 argument, but 2 were provided."
+                     },
+                     {
+                         "key":  "1d799634-451b-46ca-8e47-771678994743",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "dbaab961-94dd-4d97-bc49-ae485be200f9",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6772",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "Ambiguous spacing before next element input"
+                     },
+                     {
+                         "key":  "52148810-1b88-47c8-9c5d-35d307ca1b6c",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S1854",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Remove this useless assignment to variable \"handleDirectImageUpload\"."
+                     },
+                     {
+                         "key":  "6e2f0b7e-6513-48db-b51d-840b9dcc5d56",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1481",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Remove the declaration of the unused \u0027handleDirectImageUpload\u0027 variable."
+                     },
+                     {
+                         "key":  "d4c8bad6-714a-4630-b63e-d4aaf43f1afa",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "de4c4599-d243-4072-b762-14fef8cc4961",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "81374126-d096-481e-8067-097f541ceda0",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "f57992e1-5f7b-4eaf-863f-e640623f48cd",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:backend/routes/supplyProductRoutes.js",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed."
+                     },
+                     {
+                         "key":  "479b71b0-8f90-4610-82ed-ee44700a5b16",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:backend/routes/supplyProductRoutes.js",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 32 to the 15 allowed."
+                     },
+                     {
+                         "key":  "384217c5-ecda-4bc6-bfcb-448ae9ef6d4a",
+                         "type":  "CODE_SMELL",
+                         "severity":  "CRITICAL",
+                         "rule":  "javascript:S3776",
+                         "component":  "smartgrow-ec4206-local:backend/routes/supplyProductRoutes.js",
+                         "message":  "Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed."
+                     },
+                     {
+                         "key":  "0f218fe8-7a79-4e83-a06c-aade919a4093",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CartDrawer.jsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "2b569347-b806-495e-b064-c086c6a901ca",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CartDrawer.jsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "5956f5d4-adde-47e5-b477-da12c39eedc2",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CartDrawer.jsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "c047680f-eca6-4d5a-831d-4800da32ca5f",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CartDrawer.jsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "c3c1d603-138b-45cb-a6cc-5e6f2deb0aeb",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CustomerOrdersModal.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "1e36d52d-c4d6-4b3f-8d7b-6b5d96842887",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/CustomerSupplyOrdersModal.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "0e3aa020-6b75-4134-95b4-fa65a886a881",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplyCartDrawer.jsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "810a2b20-a87b-4b81-a6a5-6ee55a7f3e79",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplyCartDrawer.jsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "c5d3eec9-4d7e-4d1b-9b2a-b580a8676320",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplyCartDrawer.jsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "e9a7a082-6b10-4a2c-9f83-cc7795b41b7d",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplyCartDrawer.jsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "12c69df3-e935-4e7b-ba43-32c6f2e5da8f",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerOrdersManager.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "89187bde-117d-42f5-8b39-c3ecdcbab6da",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerOrdersManager.jsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "fa7f3008-111a-4269-b753-0392ce982d34",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerOrdersManager.jsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "f1838efc-9725-47db-89c1-bc1b2da118dd",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "fa68cf5d-40b4-4097-a59b-87c6df3a5979",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "15393aee-de8a-423c-b983-7543a04cac2d",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "eb166ca3-9a70-4ee5-9ae1-24f937cb2c2b",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "5c044173-2df1-4fca-a3a2-af7606d09218",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "749439cd-f1c6-4123-b3e5-7fbc63958023",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "dc2a46e2-fef0-47d6-ae5a-ef7ce317e99e",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "ec2d9457-70f3-4091-803e-256f548e5fce",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "8b67be72-666a-45ae-88d3-33bb840919aa",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/FarmerProductManager.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "1ccb903f-e5ce-4aca-afff-6af3f5ee4d7d",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "d04537a2-0338-45b8-801d-dfc383a8b3cb",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "5b3a11c4-dc70-43d2-b9a6-d31286eff7f9",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "a099b74d-44ba-4252-967f-04a676cfe920",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplierProductManager.jsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "cf19100d-79ac-472e-82e2-39fae7bbf9bb",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/expertconnect/ExpertCard.jsx",
+                         "message":  "\u0027expert.isVerified\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "d0c9dda8-ccaa-4bb8-a8d2-a8eecd28a766",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/expertconnect/ExpertCard.jsx",
+                         "message":  "\u0027expert.isVerified\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "2c5ef02b-e5b2-4d63-ae34-6e560d1c94b0",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/expertconnect/ExpertConnectView.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "bde75398-1a28-4140-80e1-b380a1e27f19",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/MarketplaceView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "96abb542-77dc-4b94-8ab7-3f93dac57509",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/MarketplaceView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "c264e1b7-cea3-4e6a-b49b-81bff15e1587",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/MarketplaceView.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "13fbd039-3050-4b7b-98d5-9ea64bc6a6cc",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SuppliersMarketplaceView.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "00b43f89-cd30-4cab-b93b-a376e4719496",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "typescript:S6848",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/BottomCarouselBar.tsx",
+                         "message":  "Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element."
+                     },
+                     {
+                         "key":  "a4658d59-43a7-4bda-b380-d5c73af391bd",
+                         "type":  "BUG",
+                         "severity":  "MINOR",
+                         "rule":  "typescript:S1082",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/BottomCarouselBar.tsx",
+                         "message":  "Visible, non-interactive elements with click handlers must have at least one keyboard listener."
+                     },
+                     {
+                         "key":  "8ff93002-8f94-4c47-af5e-1ee6b11d78e8",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6772",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/SensorCard.jsx",
+                         "message":  "Ambiguous spacing after previous element span"
+                     },
+                     {
+                         "key":  "7efbada6-2bb8-426f-aebb-928cdf6bb08a",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CropCard.jsx",
+                         "message":  "\u0027crop.farmerName\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "0ad41553-1d7d-4780-92a8-87e55c1b9d4a",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CropCard.jsx",
+                         "message":  "\u0027crop.location\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "906b4c6e-b719-488f-a377-5573e1f4f907",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/marketplace/CropCard.jsx",
+                         "message":  "\u0027crop.unit\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "7f6ba641-a113-4e45-ac7c-b230053d35a4",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplyCard.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "050f1616-90d7-4b71-bd77-cd19dacf6a9a",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S3358",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplyCard.jsx",
+                         "message":  "Extract this nested ternary operation into an independent statement."
+                     },
+                     {
+                         "key":  "617f70f9-48f9-4050-b3b0-a85b2c61e627",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/suppliers/SupplyCard.jsx",
+                         "message":  "\u0027supply.supplierName\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "dd6e300d-7ad2-413e-8b29-ef4612befde2",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "e18868a0-79cf-440b-84ab-98c317be3a31",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "5d13fbcf-89e9-4a07-9e75-6cfdd4d956c5",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "3fadd911-1dcb-49d3-b397-9ca6bfa623ec",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "01aa9eef-9682-4b6f-91b5-c9ebea9236a5",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "64f97190-937e-4127-8429-4c659890f822",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6853",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "A form label must be associated with a control."
+                     },
+                     {
+                         "key":  "21280f81-193a-4a48-8ca3-ca93fbb08f0a",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/Navbar.jsx",
+                         "message":  "\u0027onNavigateSupport\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "3a5389bd-fdc7-4393-9615-7410879d0612",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/Navbar.jsx",
+                         "message":  "\u0027currentView\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "61e1bf23-2848-427b-a263-b876e5665484",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1128",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "Remove this unused import of \u0027LifeBuoy\u0027."
+                     },
+                     {
+                         "key":  "772f4092-768c-4e0e-844c-4fb68b8c05d9",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1128",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "Remove this unused import of \u0027Clock\u0027."
+                     },
+                     {
+                         "key":  "0f5041bd-c418-41b1-8fab-a5eb49d427ff",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1128",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "Remove this unused import of \u0027AlertTriangle\u0027."
+                     },
+                     {
+                         "key":  "203365dc-b08a-4ba3-b17f-9e5ddcd7fcd8",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1128",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "Remove this unused import of \u0027Activity\u0027."
+                     },
+                     {
+                         "key":  "61951c3a-aa05-40b1-ba36-5297901344e2",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MINOR",
+                         "rule":  "javascript:S1128",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "Remove this unused import of \u0027FileText\u0027."
+                     },
+                     {
+                         "key":  "3731256e-1566-4600-8d89-a7f6072d30ef",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "\u0027currentUser\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "e1a53e7a-f998-4147-a8c4-39a75fcf3405",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "\u0027onNavigateHome\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "7a8519d2-9425-4270-9481-e55682658a1e",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "\u0027onGoToDashboard\u0027 is missing in props validation"
+                     },
+                     {
+                         "key":  "5243d76b-b507-4da8-83c2-58dccf8a7a54",
+                         "type":  "CODE_SMELL",
+                         "severity":  "MAJOR",
+                         "rule":  "javascript:S6774",
+                         "component":  "smartgrow-ec4206-local:frontend/src/components/support/SupportView.jsx",
+                         "message":  "\u0027onSelectModule\u0027 is missing in props validation"
+                     }
+                 ],
+    "findingsReturned":  100,
+    "findingTotal":  977
+}

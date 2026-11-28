@@ -1,0 +1,17 @@
+{
+  "analysisSnapshot": "Existing authenticated SonarQube analysis preserved; no new scan or quality-gate result claimed.",
+  "analysisStatus": "SUCCESS",
+  "hotspotRecords": 17,
+  "serverReviewStatus": "TO_REVIEW; local assessments are in hotspot-review.md",
+  "files": [
+    {
+      "path": "qa/section-3.9/evidence/sonarqube-analysis/sonarqube-results.json",
+      "sha256": "a22eb8756bb80df7bfdd9ff85e1bd0cef2a0a92f8aea5a695519cda13c5d0170"
+    },
+    {
+      "path": "qa/section-3.9/evidence/sonarqube-analysis/security-hotspots.json",
+      "sha256": "d0bb839251c6b8a4bfc9245f9991c85aac2eac8d0373ac5118766e9c389619bd"
+    }
+  ],
+  "temporaryCoverageData": "Excluded from Git; original files preserved locally."
+}
