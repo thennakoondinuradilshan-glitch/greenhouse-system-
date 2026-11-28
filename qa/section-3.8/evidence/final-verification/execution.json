@@ -1,0 +1,43 @@
+{
+  "command": [
+    "node",
+    "qa\\node_modules\\c8\\bin\\c8.js",
+    "--all",
+    "--include",
+    "backend/**/*.js",
+    "--reporter=lcov",
+    "--reporter=text-summary",
+    "--reports-dir",
+    "qa\\section-3.9\\evidence\\coverage-final",
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "qa\\section-3.8\\tests\\application.test.cjs"
+  ],
+  "workingDirectory": "C:\\QA-Project\\greenhouse-system-",
+  "runId": "1795615220352-8620",
+  "exitCode": 0,
+  "node": "v26.13.0",
+  "platform": "win32",
+  "database": "mongodb://127.0.0.1:27028/smartgrow_qa_1795615220352-8620",
+  "tests": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0
+  },
+  "coverage": {
+    "statementsPercent": 31.96,
+    "linesPercent": 31.96,
+    "branchesPercent": 59.25,
+    "functionsPercent": 17.39
+  },
+  "sourceSha256": {
+    "backend/routes/authRoutes.js": "0e89de08d551b946dc0b6315ba7ea8a57934002fbfb628cbcaf30dc10aee6580",
+    "backend/routes/cartRoutes.js": "2826d71bd18417eb3ba8d04b8ba37dee7b2417266602b764290fa31f7a751356",
+    "backend/routes/deviceRoutes.js": "15eec282d85512203f78ace5fdaa92be85dc7de1825e77ac409dfa1bc08323ff",
+    "backend/server.js": "081edd7f35386eb37ed2e1393fe367e1388fff29a0c4bc7c2f91b69fffa49c7d",
+    "frontend/src/services/api.js": "e3f9bd4c4bb4529b1c542d135e1e17654a5f945727bb1042e513ce7a32ebdbab",
+    "qa/section-3.8/tests/application.test.cjs": "123439c76e1a8d8faa97677f5e9637f876ce7ca7337500851f332ce6fc93baa7"
+  }
+}

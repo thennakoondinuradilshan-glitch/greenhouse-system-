@@ -1,0 +1,858 @@
+[
+  {
+    "at": "2026-11-25T17:48:43.870Z",
+    "method": "POST",
+    "route": "/api/auth/register",
+    "authenticated": false,
+    "request": {
+      "username": "qa-farmer-1795628921509-16716",
+      "email": "qa-1795628921509-16716@example.invalid",
+      "password": "[REDACTED]",
+      "role": "farmer",
+      "phoneNumber": "0770000000",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 201,
+    "response": {
+      "token": "[REDACTED]",
+      "user": {
+        "id": "6b071f7ba3f81210c816df01",
+        "username": "qa-farmer-1795628921509-16716",
+        "email": "qa-1795628921509-16716@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T17:48:43.851Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:43.877Z",
+    "method": "GET",
+    "route": "/",
+    "authenticated": false,
+    "status": 200,
+    "response": "Greenhouse Monitoring API is running..."
+  },
+  {
+    "at": "2026-11-25T17:48:43.980Z",
+    "method": "POST",
+    "route": "/api/auth/login",
+    "authenticated": false,
+    "request": {
+      "email": "qa-1795628921509-16716@example.invalid",
+      "password": "[REDACTED]"
+    },
+    "status": 200,
+    "response": {
+      "token": "[REDACTED]",
+      "user": {
+        "id": "6b071f7ba3f81210c816df01",
+        "username": "qa-farmer-1795628921509-16716",
+        "email": "qa-1795628921509-16716@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T17:48:43.851Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:43.988Z",
+    "method": "GET",
+    "route": "/api/auth/profile",
+    "authenticated": true,
+    "status": 200,
+    "response": {
+      "success": true,
+      "user": {
+        "id": "6b071f7ba3f81210c816df01",
+        "username": "qa-farmer-1795628921509-16716",
+        "email": "qa-1795628921509-16716@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T17:48:43.851Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:43.993Z",
+    "method": "POST",
+    "route": "/api/auth/register",
+    "authenticated": false,
+    "request": {
+      "username": "qa-admin-attempt-1795628921509-16716",
+      "email": "qa-admin-1795628921509-16716@example.invalid",
+      "password": "[REDACTED]",
+      "role": "admin",
+      "phoneNumber": "0770000000",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 400,
+    "response": {
+      "error": "Administrator accounts cannot be publicly registered"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.095Z",
+    "method": "POST",
+    "route": "/api/auth/login",
+    "authenticated": false,
+    "request": {
+      "email": " QA-1795628921509-16716@EXAMPLE.INVALID ",
+      "password": "[REDACTED]"
+    },
+    "status": 200,
+    "response": {
+      "token": "[REDACTED]",
+      "user": {
+        "id": "6b071f7ba3f81210c816df01",
+        "username": "qa-farmer-1795628921509-16716",
+        "email": "qa-1795628921509-16716@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T17:48:43.851Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.102Z",
+    "method": "POST",
+    "route": "/api/auth/register",
+    "authenticated": false,
+    "request": {
+      "username": "qa-duplicate-1795628921509-16716",
+      "email": " QA-1795628921509-16716@EXAMPLE.INVALID ",
+      "password": "[REDACTED]",
+      "role": "farmer",
+      "phoneNumber": "0770000000",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 400,
+    "response": {
+      "error": "Email is already registered"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.119Z",
+    "method": "POST",
+    "route": "/api/products",
+    "authenticated": true,
+    "request": {
+      "name": "QA Peppers 1795628921509-16716",
+      "category": "Vegetables",
+      "description": "Synthetic QA crop",
+      "price": 4.5,
+      "quantity": 25,
+      "unit": "kg",
+      "farmerName": "Synthetic QA Farmer",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 201,
+    "response": {
+      "success": true,
+      "message": "Crop listing created successfully",
+      "data": {
+        "name": "QA Peppers 1795628921509-16716",
+        "category": "Vegetables",
+        "description": "Synthetic QA crop",
+        "images": [],
+        "price": 4.5,
+        "unit": "kg",
+        "quantity": 25,
+        "lowStockThreshold": 10,
+        "minOrderQuantity": 1,
+        "farmer": "6b071f7ba3f81210c816df01",
+        "farmerName": "qa-farmer-1795628921509-16716",
+        "location": "Synthetic QA Farm",
+        "harvestDate": "2026-11-25T17:48:44.107Z",
+        "isOrganicVerified": false,
+        "deliveryOptions": {
+          "homeDelivery": true,
+          "farmPickup": true
+        },
+        "status": "active",
+        "_id": "6b071f7ca3f81210c816df02",
+        "createdAt": "2026-11-25T17:48:44.110Z",
+        "updatedAt": "2026-11-25T17:48:44.110Z",
+        "__v": 0
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.124Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "6b071f7ca3f81210c816df02",
+          "quantity": 4,
+          "price": 0.01
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 200,
+    "response": {
+      "success": true,
+      "items": [
+        {
+          "productId": "6b071f7ca3f81210c816df02",
+          "name": "QA Peppers 1795628921509-16716",
+          "category": "Vegetables",
+          "unit": "kg",
+          "image": "",
+          "unitPrice": 4.5,
+          "requestedQuantity": 4,
+          "validQuantity": 4,
+          "itemTotal": 18,
+          "availableStock": 25,
+          "farmerId": "6b071f7ba3f81210c816df01",
+          "farmerName": "qa-farmer-1795628921509-16716",
+          "location": "Synthetic QA Farm",
+          "minOrderQuantity": 1,
+          "isOrganicVerified": false,
+          "isUnavailable": false,
+          "stockWarning": null
+        }
+      ],
+      "subtotal": 18,
+      "deliveryFee": 2.5,
+      "deliveryMethod": "delivery",
+      "total": 20.5,
+      "uniqueFarmersCount": 1,
+      "farmers": [
+        {
+          "farmerId": "6b071f7ba3f81210c816df01",
+          "farmerName": "qa-farmer-1795628921509-16716",
+          "location": "Synthetic QA Farm"
+        }
+      ],
+      "hasUnavailableItems": false,
+      "hasStockIssues": false
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.126Z",
+    "method": "GET",
+    "route": "/api/auth/profile",
+    "authenticated": false,
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.128Z",
+    "method": "GET",
+    "route": "/api/admin/expertconnect/stats",
+    "authenticated": false,
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.131Z",
+    "method": "POST",
+    "route": "/api/devices",
+    "authenticated": false,
+    "request": {
+      "name": "Synthetic QA Fan 1795628921509-16716",
+      "type": "FAN",
+      "mode": "MANUAL",
+      "status": "OFF"
+    },
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.138Z",
+    "method": "POST",
+    "route": "/api/devices",
+    "authenticated": true,
+    "request": {
+      "name": "Synthetic QA Fan 1795628921509-16716",
+      "type": "FAN",
+      "mode": "MANUAL",
+      "status": "OFF"
+    },
+    "status": 201,
+    "response": {
+      "name": "Synthetic QA Fan 1795628921509-16716",
+      "type": "FAN",
+      "status": "OFF",
+      "mode": "MANUAL",
+      "_id": "6b071f7ca3f81210c816df03",
+      "lastUpdated": "2026-11-25T17:48:44.135Z",
+      "__v": 0
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.141Z",
+    "method": "PUT",
+    "route": "/api/devices/6b071f7ca3f81210c816df03",
+    "authenticated": false,
+    "request": {
+      "status": "ON"
+    },
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.142Z",
+    "method": "DELETE",
+    "route": "/api/devices/6b071f7ca3f81210c816df03",
+    "authenticated": false,
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.159Z",
+    "method": "PUT",
+    "route": "/api/devices/6b071f7ca3f81210c816df03",
+    "authenticated": true,
+    "request": {
+      "status": "ON"
+    },
+    "status": 200,
+    "response": {
+      "_id": "6b071f7ca3f81210c816df03",
+      "name": "Synthetic QA Fan 1795628921509-16716",
+      "type": "FAN",
+      "status": "ON",
+      "mode": "MANUAL",
+      "lastUpdated": "2026-11-25T17:48:44.146Z",
+      "__v": 0
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.168Z",
+    "method": "DELETE",
+    "route": "/api/devices/6b071f7ca3f81210c816df03",
+    "authenticated": true,
+    "status": 200,
+    "response": {
+      "message": "Device deleted successfully"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.264Z",
+    "method": "POST",
+    "route": "/api/auth/register",
+    "authenticated": false,
+    "request": {
+      "username": "qa-customer-1795628921509-16716",
+      "email": "qa-customer-1795628921509-16716@example.invalid",
+      "password": "[REDACTED]",
+      "role": "customer",
+      "phoneNumber": "0770000000",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 201,
+    "response": {
+      "token": "[REDACTED]",
+      "user": {
+        "id": "6b071f7ca3f81210c816df04",
+        "username": "qa-customer-1795628921509-16716",
+        "email": "qa-customer-1795628921509-16716@example.invalid",
+        "role": "customer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T17:48:44.259Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.269Z",
+    "method": "POST",
+    "route": "/api/devices",
+    "authenticated": true,
+    "request": {
+      "name": "Synthetic QA Fan 1795628921509-16716",
+      "type": "FAN",
+      "mode": "MANUAL",
+      "status": "OFF"
+    },
+    "status": 403,
+    "response": {
+      "error": "Forbidden: User role 'customer' is not authorized to access this route"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.272Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "qa-non-database-item",
+          "name": "Synthetic Fallback Crop",
+          "price": 5,
+          "quantity": -3
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 400,
+    "response": {
+      "error": "Cart quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.276Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "qa-default-quantity-crop",
+          "name": "Synthetic Crop",
+          "price": 5
+        }
+      ]
+    },
+    "status": 200,
+    "response": {
+      "success": true,
+      "items": [
+        {
+          "productId": "qa-default-quantity-crop",
+          "name": "Synthetic Crop",
+          "category": "Vegetables",
+          "unit": "kg",
+          "image": "",
+          "unitPrice": 5,
+          "requestedQuantity": 1,
+          "validQuantity": 1,
+          "itemTotal": 5,
+          "availableStock": 50,
+          "farmerName": "Verified Farm",
+          "location": "Greenhouse Bay",
+          "isUnavailable": false,
+          "stockWarning": null
+        }
+      ],
+      "subtotal": 5,
+      "deliveryFee": 2.5,
+      "deliveryMethod": "delivery",
+      "total": 7.5,
+      "uniqueFarmersCount": 1,
+      "farmers": [
+        {
+          "farmerName": "Verified Farm",
+          "location": "Greenhouse Bay"
+        }
+      ],
+      "hasUnavailableItems": false,
+      "hasStockIssues": false
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.277Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "6b071f7ca3f81210c816df02",
+          "quantity": 0
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 400,
+    "response": {
+      "error": "Cart quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.280Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "6b071f7ca3f81210c816df02",
+          "quantity": null
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 400,
+    "response": {
+      "error": "Cart quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.283Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "6b071f7ca3f81210c816df02",
+          "quantity": "not-a-number"
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 400,
+    "response": {
+      "error": "Cart quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.285Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        null
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Cart quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.288Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "qa-fallback",
+          "name": "Synthetic Crop",
+          "price": -5,
+          "quantity": 1
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Crop price must be a finite positive number"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.291Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "qa-fallback",
+          "name": "Synthetic Crop",
+          "price": 0,
+          "quantity": 1
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Crop price must be a finite positive number"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.293Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "qa-fallback",
+          "name": "Synthetic Crop",
+          "price": "not-a-number",
+          "quantity": 1
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Crop price must be a finite positive number"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.295Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "price": 5,
+          "quantity": 2
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 200,
+    "response": {
+      "success": true,
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "category": "Fertilizers",
+          "brand": "",
+          "model": "",
+          "unit": "piece",
+          "image": "",
+          "unitPrice": 5,
+          "requestedQuantity": 2,
+          "validQuantity": 2,
+          "itemTotal": 10,
+          "availableStock": 2,
+          "minOrderQuantity": 1,
+          "supplierName": "Authorized Agri Supplier",
+          "location": "Colombo Supply Hub",
+          "isUnavailable": false,
+          "stockWarning": null
+        }
+      ],
+      "subtotal": 10,
+      "deliveryFee": 3.5,
+      "deliveryMethod": "delivery",
+      "total": 13.5,
+      "uniqueSuppliersCount": 1,
+      "suppliers": [
+        {
+          "supplierName": "Authorized Agri Supplier",
+          "location": "Colombo Supply Hub"
+        }
+      ],
+      "hasUnavailableItems": false,
+      "hasStockIssues": false
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.297Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-default-quantity-supply",
+          "name": "Synthetic Supply",
+          "price": 5
+        }
+      ]
+    },
+    "status": 200,
+    "response": {
+      "success": true,
+      "items": [
+        {
+          "supplyId": "qa-default-quantity-supply",
+          "name": "Synthetic Supply",
+          "category": "Fertilizers",
+          "brand": "",
+          "model": "",
+          "unit": "piece",
+          "image": "",
+          "unitPrice": 5,
+          "requestedQuantity": 1,
+          "validQuantity": 1,
+          "itemTotal": 5,
+          "availableStock": 25,
+          "minOrderQuantity": 1,
+          "supplierName": "Authorized Agri Supplier",
+          "location": "Colombo Supply Hub",
+          "isUnavailable": false,
+          "stockWarning": null
+        }
+      ],
+      "subtotal": 5,
+      "deliveryFee": 3.5,
+      "deliveryMethod": "delivery",
+      "total": 8.5,
+      "uniqueSuppliersCount": 1,
+      "suppliers": [
+        {
+          "supplierName": "Authorized Agri Supplier",
+          "location": "Colombo Supply Hub"
+        }
+      ],
+      "hasUnavailableItems": false,
+      "hasStockIssues": false
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.298Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "price": 5,
+          "quantity": -2
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Supply quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.300Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "price": 5,
+          "quantity": 0
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Supply quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.301Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "price": 5,
+          "quantity": "not-a-number"
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Supply quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.304Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "price": -5,
+          "quantity": 1
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Supply price must be a finite positive number"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.305Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "price": 0,
+          "quantity": 1
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Supply price must be a finite positive number"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.307Z",
+    "method": "POST",
+    "route": "/api/cart/calculate-supplies",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "supplyId": "qa-supply",
+          "name": "Synthetic Supply",
+          "price": "not-a-number",
+          "quantity": 1
+        }
+      ]
+    },
+    "status": 400,
+    "response": {
+      "error": "Supply price must be a finite positive number"
+    }
+  },
+  {
+    "at": "2026-11-25T17:48:44.310Z",
+    "method": "GET",
+    "route": "/api/health",
+    "authenticated": false,
+    "status": 404,
+    "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /api/health</pre>\n</body>\n</html>\n"
+  },
+  {
+    "at": "2026-11-25T17:48:44.313Z",
+    "method": "POST",
+    "route": "/api/auth/validate-password",
+    "authenticated": false,
+    "request": {},
+    "status": 404,
+    "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /api/auth/validate-password</pre>\n</body>\n</html>\n"
+  },
+  {
+    "at": "2026-11-25T17:48:44.314Z",
+    "method": "POST",
+    "route": "/api/cart/summary",
+    "authenticated": false,
+    "request": {},
+    "status": 404,
+    "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /api/cart/summary</pre>\n</body>\n</html>\n"
+  },
+  {
+    "at": "2026-11-25T17:48:44.316Z",
+    "method": "POST",
+    "route": "/api/sensors/evaluate-pump",
+    "authenticated": false,
+    "request": {},
+    "status": 404,
+    "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /api/sensors/evaluate-pump</pre>\n</body>\n</html>\n"
+  }
+]

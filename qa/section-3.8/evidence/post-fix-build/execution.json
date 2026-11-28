@@ -1,0 +1,20 @@
+{
+  "command": [
+    "cmd.exe",
+    "/d",
+    "/s",
+    "/c",
+    "npm --prefix frontend run build"
+  ],
+  "workingDirectory": "C:\\QA-Project\\greenhouse-system-",
+  "startedAt": "2026-11-25T13:27:12.076Z",
+  "finishedAt": "2026-11-25T13:27:21.267Z",
+  "exitCode": 0,
+  "node": "v26.13.0",
+  "sourceSha256": {
+    "backend/routes/authRoutes.js": "0e89de08d551b946dc0b6315ba7ea8a57934002fbfb628cbcaf30dc10aee6580",
+    "backend/server.js": "081edd7f35386eb37ed2e1393fe367e1388fff29a0c4bc7c2f91b69fffa49c7d",
+    "backend/routes/cartRoutes.js": "c5808c2899fd7d55add9b3da5c2170831cfa3c5d7e40d52959e18bfc267d91e2",
+    "backend/routes/deviceRoutes.js": "15eec282d85512203f78ace5fdaa92be85dc7de1825e77ac409dfa1bc08323ff"
+  }
+}

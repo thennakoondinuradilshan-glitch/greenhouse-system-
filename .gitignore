@@ -3,3 +3,7 @@ node_modules/
 dist/
 frontend_backup/
 .vscode/
+.qa-local/
+.scannerwork/
+/EC4206_SmartGrow*.zip
+qa/section-3.9/evidence/coverage*/tmp/

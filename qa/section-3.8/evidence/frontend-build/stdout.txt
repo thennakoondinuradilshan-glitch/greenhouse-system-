@@ -1,0 +1,13 @@
+
+> smartgrow@1.0.0 build
+> tsc && vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 1987 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.23 kB │ gzip:   0.73 kB
+dist/assets/index-CCOiH2EN.css   76.79 kB │ gzip:  13.02 kB
+dist/assets/index-CYMoXgSP.js   792.36 kB │ gzip: 197.27 kB
+✓ built in 3.26s

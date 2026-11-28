@@ -1,0 +1,286 @@
+[
+  {
+    "at": "2026-11-25T13:18:08.991Z",
+    "method": "POST",
+    "route": "/api/auth/register",
+    "authenticated": false,
+    "request": {
+      "username": "qa-farmer-1795612687824-30096",
+      "email": "qa-1795612687824-30096@example.invalid",
+      "password": "[REDACTED]",
+      "role": "farmer",
+      "phoneNumber": "0770000000",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 201,
+    "response": {
+      "token": "[REDACTED]",
+      "user": {
+        "id": "6b06e0100b1722813ec25507",
+        "username": "qa-farmer-1795612687824-30096",
+        "email": "qa-1795612687824-30096@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T13:18:08.985Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:08.994Z",
+    "method": "GET",
+    "route": "/",
+    "authenticated": false,
+    "status": 200,
+    "response": "Greenhouse Monitoring API is running..."
+  },
+  {
+    "at": "2026-11-25T13:18:09.062Z",
+    "method": "POST",
+    "route": "/api/auth/login",
+    "authenticated": false,
+    "request": {
+      "email": "qa-1795612687824-30096@example.invalid",
+      "password": "[REDACTED]"
+    },
+    "status": 200,
+    "response": {
+      "token": "[REDACTED]",
+      "user": {
+        "id": "6b06e0100b1722813ec25507",
+        "username": "qa-farmer-1795612687824-30096",
+        "email": "qa-1795612687824-30096@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T13:18:08.985Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.069Z",
+    "method": "GET",
+    "route": "/api/auth/profile",
+    "authenticated": true,
+    "status": 200,
+    "response": {
+      "success": true,
+      "user": {
+        "id": "6b06e0100b1722813ec25507",
+        "username": "qa-farmer-1795612687824-30096",
+        "email": "qa-1795612687824-30096@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T13:18:08.985Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.080Z",
+    "method": "POST",
+    "route": "/api/auth/register",
+    "authenticated": false,
+    "request": {
+      "username": "qa-admin-attempt-1795612687824-30096",
+      "email": "qa-admin-1795612687824-30096@example.invalid",
+      "password": "[REDACTED]",
+      "role": "admin",
+      "phoneNumber": "0770000000",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 400,
+    "response": {
+      "error": "Administrator accounts cannot be publicly registered"
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.145Z",
+    "method": "POST",
+    "route": "/api/auth/login",
+    "authenticated": false,
+    "request": {
+      "email": " QA-1795612687824-30096@EXAMPLE.INVALID ",
+      "password": "[REDACTED]"
+    },
+    "status": 200,
+    "response": {
+      "token": "[REDACTED]",
+      "user": {
+        "id": "6b06e0100b1722813ec25507",
+        "username": "qa-farmer-1795612687824-30096",
+        "email": "qa-1795612687824-30096@example.invalid",
+        "role": "farmer",
+        "phoneNumber": "0770000000",
+        "location": "Synthetic QA Farm",
+        "createdAt": "2026-11-25T13:18:08.985Z"
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.155Z",
+    "method": "POST",
+    "route": "/api/products",
+    "authenticated": true,
+    "request": {
+      "name": "QA Peppers 1795612687824-30096",
+      "category": "Vegetables",
+      "description": "Synthetic QA crop",
+      "price": 4.5,
+      "quantity": 25,
+      "unit": "kg",
+      "farmerName": "Synthetic QA Farmer",
+      "location": "Synthetic QA Farm"
+    },
+    "status": 201,
+    "response": {
+      "success": true,
+      "message": "Crop listing created successfully",
+      "data": {
+        "name": "QA Peppers 1795612687824-30096",
+        "category": "Vegetables",
+        "description": "Synthetic QA crop",
+        "images": [],
+        "price": 4.5,
+        "unit": "kg",
+        "quantity": 25,
+        "lowStockThreshold": 10,
+        "minOrderQuantity": 1,
+        "farmer": "6b06e0100b1722813ec25507",
+        "farmerName": "qa-farmer-1795612687824-30096",
+        "location": "Synthetic QA Farm",
+        "harvestDate": "2026-11-25T13:18:09.150Z",
+        "isOrganicVerified": false,
+        "deliveryOptions": {
+          "homeDelivery": true,
+          "farmPickup": true
+        },
+        "status": "active",
+        "_id": "6b06e0110b1722813ec25508",
+        "createdAt": "2026-11-25T13:18:09.152Z",
+        "updatedAt": "2026-11-25T13:18:09.152Z",
+        "__v": 0
+      }
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.159Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "6b06e0110b1722813ec25508",
+          "quantity": 4,
+          "price": 0.01
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 200,
+    "response": {
+      "success": true,
+      "items": [
+        {
+          "productId": "6b06e0110b1722813ec25508",
+          "name": "QA Peppers 1795612687824-30096",
+          "category": "Vegetables",
+          "unit": "kg",
+          "image": "",
+          "unitPrice": 4.5,
+          "requestedQuantity": 4,
+          "validQuantity": 4,
+          "itemTotal": 18,
+          "availableStock": 25,
+          "farmerId": "6b06e0100b1722813ec25507",
+          "farmerName": "qa-farmer-1795612687824-30096",
+          "location": "Synthetic QA Farm",
+          "minOrderQuantity": 1,
+          "isOrganicVerified": false,
+          "isUnavailable": false,
+          "stockWarning": null
+        }
+      ],
+      "subtotal": 18,
+      "deliveryFee": 2.5,
+      "deliveryMethod": "delivery",
+      "total": 20.5,
+      "uniqueFarmersCount": 1,
+      "farmers": [
+        {
+          "farmerId": "6b06e0100b1722813ec25507",
+          "farmerName": "qa-farmer-1795612687824-30096",
+          "location": "Synthetic QA Farm"
+        }
+      ],
+      "hasUnavailableItems": false,
+      "hasStockIssues": false
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.161Z",
+    "method": "GET",
+    "route": "/api/auth/profile",
+    "authenticated": false,
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.162Z",
+    "method": "GET",
+    "route": "/api/admin/expertconnect/stats",
+    "authenticated": false,
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.163Z",
+    "method": "POST",
+    "route": "/api/devices",
+    "authenticated": false,
+    "request": {
+      "name": "Synthetic QA Fan 1795612687824-30096",
+      "type": "FAN",
+      "mode": "MANUAL",
+      "status": "OFF"
+    },
+    "status": 401,
+    "response": {
+      "error": "Access denied: No authentication token provided"
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.165Z",
+    "method": "POST",
+    "route": "/api/cart/calculate",
+    "authenticated": false,
+    "request": {
+      "items": [
+        {
+          "productId": "qa-non-database-item",
+          "name": "Synthetic Fallback Crop",
+          "price": 5,
+          "quantity": -3
+        }
+      ],
+      "deliveryMethod": "delivery"
+    },
+    "status": 400,
+    "response": {
+      "error": "Cart quantity must be a finite number of at least 1"
+    }
+  },
+  {
+    "at": "2026-11-25T13:18:09.167Z",
+    "method": "GET",
+    "route": "/api/health",
+    "authenticated": false,
+    "status": 404,
+    "response": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /api/health</pre>\n</body>\n</html>\n"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "qa/section-3.8/tests/application.test.cjs"
+  ],
+  "workingDirectory": "C:\\QA-Project\\greenhouse-system-",
+  "startedAt": "2026-11-25T13:16:59.360Z",
+  "finishedAt": "2026-11-25T13:17:06.515Z",
+  "exitCode": 1,
+  "node": "v26.13.0",
+  "sourceSha256": {
+    "backend/routes/authRoutes.js": "cfb6fe9ea7f7a51bbd6841c7628b93b1003bdf54acf5e14bba5b008e05f66aff",
+    "backend/server.js": "7e214cb30959817cdf11bd16695f9447d3490bc77b163e6a2c83defbd2185870",
+    "backend/routes/cartRoutes.js": "1f972a8a663b0fda18be00abdefc3d5680641651b28613b89c37a269369c95f7",
+    "backend/routes/deviceRoutes.js": "81409d261ea709f81e841074197d34bd89ad74c3e7ce5312b716ffcdfc45a494"
+  }
+}
