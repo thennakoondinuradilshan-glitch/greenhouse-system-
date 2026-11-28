@@ -9,16 +9,17 @@ const { validatePassword } = require('../utils/qaLogic');
 router.post('/register', async (req, res) => {
     const { username, email, password, role, phoneNumber, location } = req.body;
     try {
+        const normalizedEmail = String(email || '').trim().toLowerCase();
         const pwValidation = validatePassword(password);
         if (!pwValidation.valid) {
             return res.status(400).json({ error: pwValidation.message });
         }
         const existingUser = await User.findOne({
-            $or: [{ email }, { username }]
+            $or: [{ email: normalizedEmail }, { username }]
         });
 
         if (existingUser) {
-            if (existingUser.email === email) {
+            if (existingUser.email === normalizedEmail) {
                 return res.status(400).json({ error: 'Email is already registered' });
             }
             if (existingUser.username === username) {
@@ -26,14 +27,17 @@ router.post('/register', async (req, res) => {
             }
         }
 
-        // Security check: only allow valid roles
-        const allowedRoles = ['farmer', 'supplier', 'customer', 'expert', 'admin'];
+        // Administrator accounts must be provisioned outside public registration.
+        if (role === 'admin') {
+            return res.status(400).json({ error: 'Administrator accounts cannot be publicly registered' });
+        }
+        const allowedRoles = ['farmer', 'supplier', 'customer', 'expert'];
         const safeRole = allowedRoles.includes(role) ? role : 'farmer';
 
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = new User({
             username: String(username || '').trim(),
-            email: String(email || '').trim().toLowerCase(),
+            email: normalizedEmail,
             password: hashedPassword,
             role: safeRole,
             phoneNumber: String(phoneNumber || '').trim(),
@@ -63,7 +67,7 @@ router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        const user = await User.findOne({ email: String(email || '').trim() });
+        const user = await User.findOne({ email: String(email || '').trim().toLowerCase() });
         if (!user) {
             return res.status(400).json({ error: 'Invalid credentials' });
         }
